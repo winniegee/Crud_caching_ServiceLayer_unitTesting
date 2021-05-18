@@ -23,7 +23,7 @@ namespace RLS.AwesomeBar.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BarContext>(options => options.UseSqlite(Configuration.GetConnectionString("BarDatabase")));
-
+            services.AddMemoryCache();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -32,6 +32,8 @@ namespace RLS.AwesomeBar.API
 
             services.AddScoped<CategoryService>();
             services.AddScoped<IngredientService>();
+            services.AddScoped<CocktailService>();
+            //services.AddScoped<IDbContext, BarContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

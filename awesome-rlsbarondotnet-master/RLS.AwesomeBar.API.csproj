@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\Migrations\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Database\Seed\cocktails.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
