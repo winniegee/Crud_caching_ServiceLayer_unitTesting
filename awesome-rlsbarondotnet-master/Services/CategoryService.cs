@@ -19,7 +19,7 @@ namespace RLS.AwesomeBar.API.Services
         public async Task<List<Category>> GetCategoriesAsync()
         {
            
-            return await context.Categories.ToListAsync();
+            return await context.Categories.ToListAsync() ;
         }
 
         public Category GetCategory(Guid id)
